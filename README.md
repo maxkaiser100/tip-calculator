@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/maxkaiser100/tip-calculator.git
+- Live Site URL: https://maxkaiser100.github.io/tip-calculator/
 
 ## My process
 
