@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+<main class="container">
+    <h1>
+      SPLI<BR>
+      TTER
+    </h1>
+    <form class="tipSplitter">
+    <div class="card">
+      <div class="topCard">
+        
+
+        
+        <div class="totalBill">
+          <div class="label">
+            Bill
+          </div>
+          <div class="input-area">
+           
+           <input 
+            type="number" 
+            value="0"
+            onkeyup="onKeyupBillInput()" 
+            onchange="onChangeBillInput()"
+            id="totalBillInput"
+            class="input"
+            />
+            <img src="images/icon-dollar.svg" alt="">
+          </div>
+        </div>
+        <div class="tipCalc">
+          <div class="label">
+            Select Tip %
+          </div>
+          <div class="percentSelect">
+           
+              <label class="tip-5">
+                <input 
+                type="checkbox"
+                value="5"
+                name="tip"
+                onclick="checkOne(this)"
+                />
+                  <span>5%</span></label>
+
+              <label class="tip-10">
+                <input 
+                type="checkbox"
+                value="10"
+                name="tip"
+                onclick="checkOne(this)"
+                />
+                  <span>10%</span></label>
+              <label class="tip-15">
+                <input 
+                type="checkbox"
+                value="15"
+                name="tip"
+                onclick="checkOne(this)"
+                /><span>15%</span></label>
+              <label class="tip-20">
+                <input 
+                type="checkbox"
+                value="20"
+                name="tip"
+                onclick="checkOne(this)"
+                /><span>20%</span></label>
+              <label class="tip-25">
+                <input 
+                type="checkbox"
+                value="25"
+                name="tip"
+                onclick="checkOne(this)"
+                /><span>25%</span></label>
+                <label class="tip-custom" for="tip-custom">
+                  <input
+                    id="tip-custom"
+                    type="number"
+                    placeholder="Custom"
+                    min="0"
+                    class="custom-input"
+                    onkeyup="onKeyupCustomTipInput()"
+                    onchange="onChangeCustomTipInput()"
+                  />
+          </div>
+        </div>
+
+        <div class="peopleCount">
+          <div class="label">
+            Number of People
+            <span id="message" class="error-text hide"
+            >Can't be zero
+          </span>
+          </div>
+          <div class="input-area">
+            <img src="images/icon-person.svg">
+            <input
+                    type="number"
+                    id="numberPeople"
+                    class="input"
+                    value="1"
+                    min="1"
+                    onKeyup="onKeyupNbrPeople()"
+                    onchange="onChangeNbrPeople()"
+                  />
+  
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomCard">
+        <div class="amount">
+          <div class="amountLabel">
+            <div class="label tipAmount">
+              Tip Amount
+            </div>
+            <div class="lowerLabel">
+              / person
+            </div>
+          </div>
+          <div class="output" id="tipAmount">
+              0.00
+          </div>
+        </div>
+        
+        <div class="amount">
+          <div class="amountLabel">
+            <div class="label">
+            Total
+            </div>
+            <div class="lowerLabel">
+            / person
+            </div>
+          </div>
+        
+          <div class="output" id="totalAmount">
+          0.00
+          </div>
+        </div>
+        
+        <button class="reset">
+          RESET
+        </button>
+
+      </div>
+    </form>
+    </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
